@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 public class TerminatorPlus extends JavaPlugin {
 
-    public static final String REQUIRED_VERSION = "1.20.4";
+    public static final String REQUIRED_VERSION = "1.20.6";
 
     private static TerminatorPlus instance;
     private static String version;
@@ -71,13 +71,11 @@ public class TerminatorPlus extends JavaPlugin {
         this.registerEvents(manager);
 
         if (!correctVersion) {
-            for (int i = 0; i < 20; i++) { // Kids are stupid so we need to make sure they see this
-                getLogger().severe("----------------------------------------");
-                getLogger().severe("TerminatorPlus is not compatible with your server version!");
-                getLogger().severe("You are running on version: " + version + ", required version: " + REQUIRED_VERSION);
-                getLogger().severe("Either download the correct version of TerminatorPlus or update your server. (https://papermc.io/downloads)");
-                getLogger().severe("----------------------------------------");
-            }
+            getLogger().severe("----------------------------------------");
+            getLogger().severe("TerminatorPlus is not compatible with your server version!");
+            getLogger().severe("You are running on version: " + version + ", required version: " + REQUIRED_VERSION);
+            getLogger().severe("Either download the correct version of TerminatorPlus or update your server. (https://papermc.io/downloads)");
+            getLogger().severe("----------------------------------------");
         }
     }
 
